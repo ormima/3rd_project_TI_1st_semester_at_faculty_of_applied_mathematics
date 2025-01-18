@@ -8,7 +8,7 @@ const navigation = document.getElementById("navigation");
 const sources = document.getElementById("sources");
 
 ref_navigation.addEventListener("click", () => {
-    navigation.scrollIntoView({behavior: "smooth"});
+    navigation.scrollIntoView({behavior: "instant"});
     location.reload();
 })
 // ref_navigation.addEventListener("click", () => {

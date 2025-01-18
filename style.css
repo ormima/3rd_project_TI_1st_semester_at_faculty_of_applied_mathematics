@@ -19,6 +19,8 @@ section{
     display: flex;
     background: rgb(199,28,177);
     background: linear-gradient(0deg, rgba(199,28,177,1) 0%, rgba(12,40,11,1) 100%);
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
 }
 .main_section_starter{
     flex-wrap: wrap;
@@ -35,6 +37,10 @@ header{
     background: rgb(42,0,120);
     background: linear-gradient(255deg, rgba(42,0,120,1) 5%, rgba(0,6,88,1) 60%, rgba(1,80,176,1) 100%);
     border-bottom: solid 0.5px silver;
+}
+header:hover{
+    background: rgb(42,0,120);
+    background: linear-gradient(75deg, rgba(42,0,120,1) 5%, rgba(0,6,88,1) 60%, rgba(1,80,176,1) 100%);
 }
 h1{
     color: #acfeff;
@@ -74,14 +80,15 @@ nav{
     /* … */
 /* } */
 .main_section_starter_box_buttons_label > button{
-    width: 50%;
-    height: 90%;
+    width: 45%;
+    height: 85%;
     text-transform: uppercase;
     color: #141414;
     font-weight: bold;
     border-radius: 20px;
     border: solid #9d9d9d;
-    background-color: #ddd;
+    background: rgb(221,221,221);
+    background: radial-gradient(circle, rgba(221,221,221,1) 0%, rgba(157,157,157,1) 100%);
     text-align: center;
 }
 .main_section_starter_box_buttons_label > button:hover{
@@ -93,6 +100,7 @@ nav{
     /* border-radius: 20px; */
     border: solid #ddd;
     background-color: #9d9d9d;
+    background: #9d9d9d;
 }
 main{
     padding-top: 10%;
@@ -108,12 +116,51 @@ main{
 main > h3{
     width: 100%;
     height: 15%;
-    display: flex;
-    background-color: #acfeff;
+    display: block;
+    text-align: center;
+    /* background-color: #acfeff; */
 }
-main > span{
+main > label{
+    height: 20%;
     width: 100%;
-    height: 50%;
     display: flex;
-    background-color: gold;
+    align-items: center;
+    justify-content: center;
+}
+label > img{
+    height: 100%;
+    border-radius: 5px;
+    border: solid 1px dimgray;
+    box-shadow: dimgray 5px 5px 15px;
+}
+label > img:hover{
+    transform: scale(1.4);
+    filter: blur(3px);
+    filter: sepia(100%);
+    filter: opacity(75%);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    cursor: crosshair;
+}
+.main_section_starter_box_span{
+    width: 80%;
+    height: 50%;
+    display: block;
+    /* background-color: gold; */
+    padding: 10px;
+    font-weight: lighter;
+}
+.main_section_starter_box_span > b{
+    color: white;
+    font-size: 1.1rem;
+}
+.main_section_starter_box_span > a{
+    color: white;
+    /* text-decoration: none; */
+    font-weight: lighter;
+    text-decoration: underline;
+}
+.main_section_starter_box_span > a:hover{
+    font-style: italic;
 }
