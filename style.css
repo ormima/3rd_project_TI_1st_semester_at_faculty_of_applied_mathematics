@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans';
+    box-sizing: border-box;
     scroll-snap-type: y mandatory;
     scroll-snap-stop: normal;
 }
 .container{
-    height: 700vh;
+    height: 500vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,6 +24,11 @@ section{
     border-bottom: solid 1px silver;
     scroll-snap-align: start;
 }
+button:hover{
+    cursor: pointer;
+}
+
+    /* 1st page - menu */
 .main_section_starter{
     flex-wrap: wrap;
     background: rgb(42,0,120);
@@ -67,9 +73,6 @@ nav{
     border-right: dashed 0.5px silver;
     /* background-color: brown; */
 }
-/* @media (width <= 1250px) { */
-    /* … */
-/* } */
 .main_section_starter_box_buttons_label{
     width: 100%;
     height: 10%;
@@ -77,9 +80,6 @@ nav{
     align-items: center;
     justify-content: center;
 }
-/* @media (width <= 1250px) { */
-    /* … */
-/* } */
 .main_section_starter_box_buttons_label > button{
     width: 65%;
     height: 85%;
@@ -103,7 +103,7 @@ nav{
     background-color: #9d9d9d;
     background: #9d9d9d;
 }
-main{
+.main{
     padding-top: 10%;
     width: 70%;
     height: 100%;
@@ -114,14 +114,14 @@ main{
     color: #f0f5ff;
     /* background-color: aqua; */
 }
-main > h3{
+.main > h3{
     width: 100%;
     height: 15%;
     display: block;
     text-align: center;
     /* background-color: #acfeff; */
 }
-main > label{
+.main > label{
     height: 20%;
     width: 100%;
     display: flex;
@@ -166,7 +166,282 @@ label > img:hover{
     font-style: italic;
 }
 
-/* turings_machine */
+    /* 1st page when low width */
+@media screen and (max-width: 1000px){
+    .main_section_starter_box{
+        flex-wrap: wrap;
+    }
+    .main_section_starter > header{
+        padding: 10px;
+    }
+    nav{
+        width: 100%;
+        height: 20%;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        border-right: 0px;
+        border-bottom: dashed 0.5px silver;
+    }
+    .main_section_starter_box_buttons_label{
+        width: 20%;
+        height: 50%;
+    }
+    .main_section_starter_box_buttons_label > button{
+        width: 100%;
+        height: 100%;
+    }
+    .main{
+        width: 100%;
+        height: 80%;
+    }
+}
+
+    /* 2nd page - alan turing */
+.main_section_alan_turing{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgb(129,11,14);
+    background: linear-gradient(105deg, rgba(129,11,14,1) 0%, rgba(29,21,24,1) 100%);
+}
+.main_section_alan_turing_header, .main_section_alan_turing_content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_section_alan_turing_header{
+    flex-wrap: nowrap;
+    border-bottom: solid 1px silver;
+    color: silver;
+    height: 15%;
+    /* background-color: chocolate; */
+}
+.main_section_alan_turing_header_buttons_label{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ref_navigation{
+    width: 75%;
+    height: 60%;
+    text-transform: uppercase;
+    color: #141414;
+    font-weight: bold;
+    border-radius: 20px;
+    border: solid #9d9d9d;
+    background: rgb(221,221,221);
+    background: radial-gradient(circle, rgba(221,221,221,1) 0%, rgba(157,157,157,1) 100%);
+    text-align: center;
+    box-shadow: 10px 10px 15px dimgray;
+}
+.ref_navigation:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 0.4s;
+    text-transform: uppercase;
+    font-weight: bolder;
+    /* border-radius: 20px; */
+    border: solid #ddd;
+    background-color: #9d9d9d;
+    background: #9d9d9d;
+}
+.main_section_alan_turing_header_button:hover{
+    color: rgb(129,11,14);
+}
+.main_section_alan_turing_header_title{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_section_alan_turing_header_title > h2{
+    text-align: center;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.main_section_alan_turing_header_title > h2{
+    cursor: default;
+}
+.main_section_alan_turing_content{
+    height: 85%;
+    flex-wrap: wrap;
+    /* background-color: chartreuse; */
+}
+.main_section_alan_turing_content > p{
+    height: 40%;
+    width: 80%;
+    text-align: center;
+    overflow-y: auto;
+    color: #c2abcc;
+    font-size: 1.3rem;
+    scrollbar-width: thin;
+    scrollbar-color: #c2abcc rgb(129,11,14);
+    scrollbar-gutter: stable;
+}
+.main_section_alan_turing_content > p::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+hr{
+    height: 1px;
+    width: 80%;
+    color: silver;
+}
+
+    /* 2nd page when low width */
+    @media screen and (max-width: 1000px){
+        .main_section_alan_turing_header_button{
+            height: 45%;
+            width: 85%;
+        }
+        .main_section_alan_turing_content > p{
+            scrollbar-width: auto;
+        }
+    }
+
+    /* 3rd page - enigma */
+.main_section_enigma{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main_section_enigma_header{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: rgb(68,1,89);
+    background: linear-gradient(75deg, rgba(68,1,89,1) 0%, rgba(144,43,122,1) 100%);
+    border-bottom: silver 1px solid;
+}
+.main_section_enigma_header:hover{
+    background: rgb(68,1,89);
+    background: linear-gradient(75deg, rgba(144,43,122,1) 0%, rgba(68,1,89,1) 100%);
+}
+.main_section_enigma_header_title, .main_section_enigma_header_buttons_label{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_section_enigma_header_title{
+    width: 85%;
+    color: silver;
+    font-weight: bolder;
+}
+.main_section_enigma_header_buttons_label{
+    width: 15%;
+}
+.main_section_enigma_header_button:hover{
+    color: rgba(68,1,89,1);
+}
+.main_section_enigma_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 85%;
+    background: rgb(144,43,122);
+    background: radial-gradient(circle, rgba(144,43,122,1) 0%, rgba(68,1,89,1) 100%);
+}
+.main_section_enigma_box_top, .main_section_enigma_box_bottom{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.main_section_enigma_box_top{
+    border-bottom: 1px solid silver;
+}
+.main_section_enigma_box_top > p, .main_section_enigma_box_top_img{
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+}
+.main_section_enigma_box_top_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_section_enigma_box_top > p{
+    text-align: center;
+    padding-top: 5%;
+    overflow-y: auto;
+    color: #c2abcc;
+    font-size: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #c2abcc #380047;
+    scrollbar-gutter: stable;
+}
+.main_section_enigma_box_top > p:hover{
+    color: cyan;
+}
+.main_section_enigma_box_top > p::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+.main_section_enigma_box_top_img > img{
+    width: 70%;
+    height: auto;
+}
+.main_section_enigma_box_top_img > img:hover{
+    filter: grayscale(1);
+}
+.main_section_enigma_box_bottom > p{
+    height: 75%;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    border: silver 2px groove;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px dimgray;
+    background-color: #c2abcc;
+    color: #380047;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #c2abcc #380047;
+    scrollbar-gutter: stable;
+}
+.main_section_enigma_box_bottom > p::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+    /* 3rd page when low width */
+    @media screen and (max-width: 1000px){
+        .main_section_enigma_header_title{
+            padding: 10px;
+        }
+        .main_section_enigma_header_button{
+            height: 45%;
+            width: 85%;
+        }
+        .main_section_enigma_box_top{
+            width: 100%;
+        }
+        .main_section_enigma_box_top > p{
+            width: 80%;
+            scrollbar-width: auto;
+        }
+        .main_section_enigma_box_top_img{
+            display: none;
+        }
+        .main_section_enigma_box_bottom > p{
+            scrollbar-width: auto;
+            width: 75%;
+        }
+    }
+
+    /* 4th page - turings machine */
 .main_section_turings_machine{
     flex-wrap: wrap;
 }
@@ -190,29 +465,6 @@ label > img:hover{
     justify-content: center;
     /* background-color: blue; */
 }
-.main_section_turings_machine_header_button{
-    width: 75%;
-    height: 60%;
-    text-transform: uppercase;
-    color: #141414;
-    font-weight: bold;
-    border-radius: 20px;
-    border: solid #9d9d9d;
-    background: rgb(221,221,221);
-    background: radial-gradient(circle, rgba(221,221,221,1) 0%, rgba(157,157,157,1) 100%);
-    text-align: center;
-}
-.main_section_turings_machine_header_button:hover{
-    transform: scale(1.2);
-    transition: ease-in-out 0.4s;
-    text-transform: uppercase;
-    color: #000c5b;
-    font-weight: bolder;
-    /* border-radius: 20px; */
-    border: solid #ddd;
-    background-color: #9d9d9d;
-    background: #9d9d9d;
-}
 .main_section_turings_machine_header_box{
     width: 80%;
     height: 100%;
@@ -230,6 +482,9 @@ label > img:hover{
 }
 .main_section_turings_machine_header_box_left{
     justify-content: right;
+}
+.main_section_turings_machine_header_button:hover{
+    color: #000c5b;
 }
 .main_section_turings_machine_header_box_left > img{
     height: 80%;
@@ -299,7 +554,7 @@ label > img:hover{
     display: none;
 }
 .main_section_turings_machine_box_article{
-    padding: 10px;
+    padding: 2px;
     justify-content: center;
     align-items: center;
     height: 70%;
@@ -315,10 +570,209 @@ label > img:hover{
     transition: ease 1s;
 }
 .main_section_turings_machine_box_description > p{
-    height: 70%;
-    width: 70%;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    overflow-y: auto;
     font-size: 1.3rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(119,207,255,0.75) #000c5b;
+    scrollbar-gutter: stable;
+}
+.main_section_turings_machine_box_description > p::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    border: 1px solid silver;
 }
 .main_section_turings_machine_box_visualisation > img{
     width: 70%;
 }
+
+    /* 4th page when low width */
+    @media screen and (max-width: 1000px){
+        .main_section_turings_machine_switches_switch_right:hover{
+            padding-left: 10px;
+        }
+        .main_section_turings_machine_box_description > p{
+            scrollbar-width: auto;
+        }
+        .main_section_turings_machine_box_visualisation{
+            width: 98%;
+        }
+        .main_section_turings_machine_box_visualisation > img{
+            width: 100%;
+        }
+    }
+
+    /* 5th page - footer */
+.main_section_sources{
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: center;
+    background-color: #088b00;
+    background: #088b00;
+}
+.main_section_sources_top{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.main_section_sources_top_buttons_label{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: #055d00 solid 1px;
+}
+.main_section_sources_top_button{
+    width: 40%;
+    height: 35%;
+    text-transform: uppercase;
+    color: #141414;
+    font-weight: bold;
+    border-radius: 100px;
+    font-size: 1.2rem;
+    border: solid #9d9d9d;
+    background: rgb(221,221,221);
+    background: radial-gradient(circle, rgba(221,221,221,1) 0%, rgba(157,157,157,1) 100%);
+    text-align: center;
+    box-shadow: 10px 10px 15px dimgray;
+}
+.main_section_sources_top_button:hover{
+    color: #055d00;
+}
+.main_section_sources_top_algoritm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    height: 100%;
+    width: 70%;
+}
+.main_section_sources_top_algoritm > h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #43df90;
+}
+.main_section_sources_top_algoritm > span{
+    text-align: center;
+    width: 100%;
+    color: #43df90;
+}
+.main_section_sources_top_algoritm_label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.main_section_sources_top_algoritm_label > input{
+    text-align: left;
+    height: 30px;
+    border: #055d00 solid 2px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: bolder;
+    padding-left: 8px;
+    background-color: #43df90;
+    color: #088b00;
+}
+.main_section_sources_top_algoritm_label > input:focus{
+    transform: scale(1.15);
+    transition: ease 0.5s;
+}
+.main_section_sources_footer{
+    width: 100%;
+    color: #43df90;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: silver 1px solid;
+}
+.main_section_sources_footer:hover{
+    height: 90%;
+    transition: ease 1s;
+}
+.main_section_sources_footer_sources{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #43df90 1px dashed;
+}
+.main_section_sources_footer_sources_links{
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main_section_sources_footer_sources_links > label{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+label > a{
+    border-bottom: 1px silver solid;
+    text-decoration: none;
+    color: silver;
+    font-size: 1.2rem;
+}
+.main_section_sources_footer_sources > p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-size: 1.5rem;
+}
+.main_section_sources_footer > p{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    padding-bottom: 5px;
+}
+.main_section_sources_footer > p > b{
+    margin-left: 2px;
+}
+
+    /* 5th page when low width */
+    @media screen and (max-width: 1000px){
+        .main_section_sources_top{
+            flex-wrap: wrap;
+            /* background-color: chocolate; */
+        }
+        .main_section_sources_top_buttons_label{
+            width: 100%;
+            height: 20%;
+            /* background-color: #380047; */
+            border-bottom: #055d00 solid 1px;
+            border-right: 0;
+        }
+        .main_section_sources_top_button{
+            width: 40%;
+            height: 35%;
+            border-radius: 100px;
+        }
+        .main_section_sources_top_algoritm{
+            width: 100%;
+            height: 80%;
+        }
+        .main_section_sources_footer > p{
+            padding-left: 10px;
+        }
+    }
