@@ -281,7 +281,44 @@ label > img:hover{
     /* background: #9d9d9d; */
 }
 .main_section_turings_machine_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+}
+.main_section_turings_machine_box{
     height: 75%;
     width: 100%;
     background-color: #edffff;
+}
+.main_section_turings_machine_box_description{
+    display: flex;
+}
+.main_section_turings_machine_box_visualisation{
+    display: none;
+}
+.main_section_turings_machine_box_article{
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 60%;
+    box-shadow: 0 0 25px dimgray;
+    border: solid 1px dimgray;
+    border-radius: 25px;
+    background-color: rgba(119,207,255,1);
+    color: #000c5b;
+}
+.main_section_turings_machine_box_article:hover{
+    transform: scale(1.15);
+    transition: ease 1s;
+}
+.main_section_turings_machine_box_description > p{
+    height: 70%;
+    width: 70%;
+    font-size: 1.3rem;
+}
+.main_section_turings_machine_box_visualisation > img{
+    width: 70%;
 }
